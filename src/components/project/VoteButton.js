@@ -15,7 +15,7 @@ const styles = {
         font: 'normal normal normal 12px/18px Source Sans Pro',
         letterSpacing: '0.07px',
         color: '#00000080',
-        marginBottom: '1em'
+        marginBottom: '2em'
     },
 }
 
