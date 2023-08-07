@@ -31,8 +31,7 @@ const styles = {
 
 export default function ProjectListItem({ contestantName, projectTitle, rank, voteCount, _id }) {
   return (
-    <Container style={styles.item}>
-      <Row className="h-100" noGutters={true} style={{ marginLeft: 0, marginRight: 0 }}>
+      <Row className="h-100" noGutters={true} style={{ ...styles.item, marginLeft: 0, marginRight: 0 }}>
         <Col xs="3" md="3" style={{ margin: "0px", flexGrow: 1, order: 1 }}>
           <Container style={{ ...styles.rankVotesContainer, height: "100%" }}>
             <Row className="h-100">
@@ -54,6 +53,5 @@ export default function ProjectListItem({ contestantName, projectTitle, rank, vo
           </div>
         </Col>
       </Row>
-    </Container>
   )
 }

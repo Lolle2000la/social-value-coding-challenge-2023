@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import ProjectListItem from "./ProjectListItem";
-
+import ProjectList from "./components/ProjectList";
+import {Redirect, Route} from "wouter";
+import Projects from "./routes/Projects";
+import Header from "./components/Header";
 
 function App() {
-  return (<ProjectListItem contestantName="John Doe" projectTitle="My Project" rank="1" voteCount="100" _id="1234" />);
+  return (<div>
+    <Header/>
+    <Route path={"/"} ><Redirect to="/projects"/></Route>
+    <Route path={"/projects"} component={Projects}/>
+  </div>);
 }
 
 export default App;
