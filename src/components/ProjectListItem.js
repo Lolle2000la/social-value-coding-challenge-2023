@@ -27,6 +27,7 @@ const styles = {
     },
     rankVotesContainer: {
         borderRight: "0.5px solid #70707050",
+        height: "100%",
     },
     contestantName: {
         textAlign: 'left',
@@ -49,7 +50,7 @@ export default function ProjectListItem({contestantName, projectTitle, rank, vot
         <Link href={`/projects/${_id}`}>
             <Row className="h-100" noGutters={true} style={{...styles.item, marginLeft: 0, marginRight: 0}}>
                 <Col xs="3" md="3" style={{margin: "0px", flexGrow: 1, order: 1}}>
-                    <Container style={{...styles.rankVotesContainer, height: "100%"}}>
+                    <Container style={styles.rankVotesContainer} fluid={true}>
                         <Row className="h-100">
                             <Col xs="12" md="6" className="d-flex align-items-center justify-content-center">
                                 <div style={styles.rank}>{rank}.</div>
