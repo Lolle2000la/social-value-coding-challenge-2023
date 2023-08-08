@@ -1,0 +1,43 @@
+.vote-button {
+    background: #029ED4 0% 0% no-repeat padding-box;
+    border: 1px solid #029ED4;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 0.5em;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.vote-button:hover {
+    background: #158CB5 0% 0% no-repeat padding-box;
+    border: 1px solid #0D7497;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.vote-button:active {
+    background: #0D7497 0% 0% no-repeat padding-box;
+    border: 1px solid #035F7E;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.vote-button:focus {
+    background: #158CB5 0% 0% no-repeat padding-box;
+    border: 1px solid #0D7497;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.vote-button:visited {
+    background: #035F7E 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.vote-button:disabled {
+    background: #029ED4 0% 0% no-repeat padding-box;
+    border: 1px solid #029ED4;
+    border-radius: 4px;
+    opacity: 0.65;
+}
