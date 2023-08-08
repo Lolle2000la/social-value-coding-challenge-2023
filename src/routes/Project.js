@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Button} from "reactstrap";
+import {Button, Col, Container, Row} from "reactstrap";
 import VoteButton from "../components/project/VoteButton";
 import ProjectInfo from "../components/project/ProjectInfo";
 import MediaGalery from "../components/project/MediaGalery";
@@ -47,15 +47,22 @@ export default function Project({id}) {
     }, [id]);
 
     return (
-        <div style={{margin: "1em"}}>
-            <ProjectInfo project={project}/>
+        <Container style={{margin: "1em"}} fluid={true}>
+            <Row>
+                <Col md={12} lg={4}>
+                    <ProjectInfo project={project}/>
 
-            <VoteButton/>
+                    <VoteButton/>
+                </Col>
 
-            <ContestantAnswers project={project}/>
+                <Col md={12} lg={8}>
+                    <ContestantAnswers project={project}/>
 
-            <MediaGalery projectGallery={projectGallery}/>
-        </div>
+                    <MediaGalery projectGallery={projectGallery}/>
+                </Col>
+            </Row>
+
+        </Container>
     )
 
 }
