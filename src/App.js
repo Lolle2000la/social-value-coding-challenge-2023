@@ -1,5 +1,4 @@
 import './App.css';
-import ProjectList from "./components/ProjectList";
 import {Redirect, Route} from "wouter";
 import Projects from "./routes/Projects";
 import Header from "./components/Header";
@@ -9,7 +8,7 @@ import {Col, Container, Row} from "reactstrap";
 
 function App() {
     return (<Container style={{padding:"0"}} fluid={true}>
-        <Row className="w-100">
+        <Row className="w-100" noGutters={true}>
             <Col md={0} lg={2}/>
             <Col md={12} lg={8}>
                 <Header/>
