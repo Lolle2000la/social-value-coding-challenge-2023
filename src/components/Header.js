@@ -15,7 +15,7 @@ const styles = {
 
 export default function Header() {
     return (
-        <div>
+        <div style={{marginBottom: "1em"}}>
             <Counter count={10}/>
             <img src={wettbewerbslogo} alt="Wettbewerbslogo" style={styles.wettbewerbslogo}/>
             <picture>

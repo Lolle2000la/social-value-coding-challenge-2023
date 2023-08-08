@@ -7,7 +7,7 @@ const styles = {
 
 export default function MediaGallery({projectGallery}) {
     return (
-        <div>
+        <div style={{marginBottom: "-1em"}}> {/* Counteract last image margin */}
             {projectGallery && projectGallery.map((image, index) =>
                 <img key={index} src={image} alt={`Bild ${index}`}
                      style={styles.projectGalleryImage}

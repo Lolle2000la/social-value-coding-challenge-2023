@@ -8,7 +8,7 @@ const styles = {
         letterSpacing: '0px',
         color: '#029ED4',
         opacity: 1,
-        marginBottom: "0.5em"
+        marginBottom: "0.5em",
     },
     searchFilterInput: {
         '&::placeholder': {
@@ -27,14 +27,16 @@ const styles = {
 }
 
 export default function SearchFilterInput() {
-    return <div style={{padding: "1em"}}>
-        <div style={styles.searchFilterInputLabel}>Suchen Sie nach einem Teilnehmernahmen</div>
-        <div className="input-group">
-            <span className="input-group-text" id="basic-addon1" style={styles.searchIcon}><BsSearch/></span>
-            <Input type="text" style={styles.searchFilterInput}
-                   placeholder="Teilnehmer suchen" aria-label="Teilnehmer suchen"
-                   aria-describedby="basic-addon1">
-            </Input>
+    return (
+        <div>
+            <div style={styles.searchFilterInputLabel}>Suchen Sie nach einem Teilnehmernahmen</div>
+            <div className="input-group">
+                <span className="input-group-text" id="basic-addon1" style={styles.searchIcon}><BsSearch/></span>
+                <Input type="text" style={styles.searchFilterInput}
+                       placeholder="Teilnehmer suchen" aria-label="Teilnehmer suchen"
+                       aria-describedby="basic-addon1">
+                </Input>
+            </div>
         </div>
-    </div>;
+    );
 }

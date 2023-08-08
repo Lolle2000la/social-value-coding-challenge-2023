@@ -21,7 +21,7 @@ export default function Project({id}) {
     }, [id]);
 
     return (
-        <Container style={{margin: "1em"}} fluid={true}>
+        <Container style={{padding: "0em 1em 0em 1em"}} fluid={true}>
             <Row>
                 <Col md={12} lg={4}>
                     <ProjectInfo project={project}/>
