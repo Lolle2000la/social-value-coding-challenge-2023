@@ -13,12 +13,20 @@ const fetchProject = async (id) => {
 
 export default function Project({id}) {
     const [project, setProject] = useState([]);
+    const [error, setError] = useState(null);
 
     const { projectGallery } = project;
 
     useEffect(() => {
-        fetchProject(id).then(project => setProject(project));
+        fetchProject(id).then(project => setProject(project)).catch(error => setError(error));
     }, [id]);
+
+    if (error) {
+        return <div style={{padding: "0em 1em 0em 1em"}}>
+            <h3>Das Projekt konnte nicht geladen werden:</h3>
+            <p>Bitte stellen Sie sicher, dass sie die korrekte Addresse eingegeben haben.</p>
+        </div>;
+    }
 
     return (
         <Container style={{padding: "0em 1em 0em 1em"}} fluid={true}>
