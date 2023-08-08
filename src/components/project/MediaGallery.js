@@ -5,7 +5,7 @@ const styles = {
     }
 }
 
-export default function MediaGalery({projectGallery}) {
+export default function MediaGallery({projectGallery}) {
     return (
         <div>
             {projectGallery && projectGallery.map((image, index) =>
